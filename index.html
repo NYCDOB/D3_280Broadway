@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<head>
+    <title>280 Broadway</title>
+    <meta charset="utf-8" />
+</head>
+<style>
+.unit3_0 {
+	fill: purple;
+	opacity: 0.3;
+}
+.unit3_1 {
+	fill: purple;
+	opacity: 0.3;
+}
+.unit3_2 {
+	fill: purple;
+	opacity: 0.3;
+}
+.unit3_3 {
+	fill: green;
+	opacity: 0.3;
+}
+.unit3_4 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+}
+.unit3_5 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+}
+.unit4_0 {
+	fill: blue;
+	opacity: 0.3;
+}
+.unit4_1 {
+	fill: blue;
+	opacity: 0.3;
+}
+.unit4_2 {
+	fill: blue;
+	opacity: 0.3;
+}
+.unit4_3 {
+	fill: yellow;
+	opacity: 0.3;
+}
+.unit5_0 {
+	fill: blue;
+	opacity: 0.3;
+}
+.unit5_1 {
+	fill: blue;
+	opacity: 0.3;
+}
+.unit5_2 {
+	fill: green;
+	opacity: 0.3;
+}
+.unit5_3 {
+	fill: yellow;
+	opacity: 0.3;
+}
+.unit5_4 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+}
+.unit5_5 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+}
+.unit6_0 {
+	fill: green;
+	opacity: 0.3;
+}
+.unit6_1 {
+	fill: yellow;
+	opacity: 0.3;
+}
+.unit6_2 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+}
+.unit6_3 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+}
+.unit6_4 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+}
+.unit6_5 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+}
+.unit7_0 {
+	fill: yellow;
+	opacity: 0.3;
+  }
+.unit7_1 {
+	fill: yellow;
+	opacity: 0.3;
+  }
+.unit7_2 {
+	fill: yellow;
+	opacity: 0.3;
+  }
+.unit7_3 {
+	fill: green;
+	opacity: 0.3;
+  }
+.unit7_4 {
+	fill: green;
+	opacity: 0.3;
+  }
+.unit7_5 {
+	fill: red;
+	opacity: 0.3;
+  }
+.unit7_6 {
+	fill: red;
+	opacity: 0.3;
+  }
+.unit7_7 {
+	fill: red;
+	opacity: 0.3;
+}
+.unit7_8 {
+	fill: red;
+	opacity: 0.3;
+  }
+.unit7_9 {
+	fill: red;
+	opacity: 0.3;
+  }
+.unit7_10 {
+	fill: blue;
+	opacity: 0.3;
+  }
+.unit7_11 {
+	fill: blue;
+	opacity: 0.3;
+  }
+.unit7_12 {
+	fill: purple;
+	opacity: 0.3;
+  }
+.unit7_13 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+  }
+  .unit7_14 {
+	fill: rgb(242,121,6);
+	opacity: 0.3;
+  }
+.floor {
+	  fill: white;
+	  stroke: gray;
+	  stroke-width: .5px;
+  }
+
+#allButtons {
+	list-style: none; 
+    margin: 10px 20px 0 0; 
+    padding: 4px 0; 
+    display: block;
+    width: 65px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #e0e0e0;
+	position: relative;
+	top: 20px;
+}
+#allButtons li {
+	list-style: none; 
+    margin: 10px 20px 0 0; 
+    padding: 4px 0; 
+    display: block;
+    width: 65px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #e0e0e0;
+	position: relative;
+	top: 20px;
+}
+#allButtons li.selected { 
+	fill: #8dd3c7; 
+	background: #C0C0C0; 
+	position: relative;
+
+}
+#legendImage {
+	position: absolute;
+	left: 20px;
+	top: 700px;
+	width: 1000px;
+	height: 50%;
+}
+#scaleImage {
+	position: absolute;
+	left: 20px;
+	top:680px;
+	width: 1000px;
+	height: 50%;
+}
+#floorLegend {
+	float:left;
+	margin: 0 auto;
+	display: inline-block;
+}
+#Bway {
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	font-family: Arial, Helvetica, sans-serif;
+	float:left;
+	margin: 300px -25px;
+	display: inline-block;
+	color: #969696;
+} 
+#reade {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #969696;
+	margin: 45px 400px;
+}
+#chambers {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #969696;
+	margin: 560px 400px;
+}
+#floorBody {
+	position: absolute;
+	left: 20px;
+	top: 100px;
+}
+
+h2 {
+	color: #002878;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	position: relative;
+	top: 15px;
+	left: 20px;
+
+}
+#main-wrapper {
+	overflow:hidden;
+	margin: 0 auto;
+}
+     
+</style>
+<body>
+
+<div id="main-wrapper">
+	<h2>280 BROADWAY</h2>
+
+<div id="floorLegend"></div>
+<div id="reade">
+	<h4>Reade Street</h4>
+</div>
+<div id="chambers">
+	<h4>Chambers Street</h4>
+</div>
+<div id="floorBody">
+	<h4 id="Bway">Broadway</h4>
+</div>
+<div id="scaleImage"></div>
+<div id="legendImage"></div>
+
+</div>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.geo.projection.v0.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<script>
+
+var width = 900,
+	height = 600
+	center = [width / 2, height / 2];
+
+/*ROTATE*/	
+var projection = d3.geo.mercator()
+    .scale(75000000)
+	.center( [0,0] )
+	.rotate([74.005587, -40.714193, 32])
+    .translate([width / 2, height / 2]);
+	
+
+var path = d3.geo.path()
+    .projection(projection);
+	
+var svg = d3.select("body #floorBody").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var g = svg.append("g");
+
+
+/*BUTTONS*/
+var w= 400;
+var h= 35;
+var svg= d3.select("body #floorLegend")
+			.append("svg")
+			.attr("width",w)
+			.attr("height",h)
+
+
+//container for all buttons
+var allButtons= svg.append("g")
+					.attr("id","allButtons") 
+					
+//button labels
+var labels= ['FLOOR 3','FLOOR 4','FLOOR 5','FLOOR 6','FLOOR 7'];
+
+//colors for different button states 
+var defaultColor= "#dbd8d8"
+var hoverColor= "#dfb6b6"
+var pressedColor= "#c72a40"
+
+//groups for each button (which will hold a rect and text)
+
+var buttonGroups= allButtons.selectAll("g.button")
+						.data(labels)
+						.enter()
+						.append("g")
+						.attr("class","button")
+						.style("cursor","pointer")
+						/*
+						.on("click",function(d,i) {
+							//updateButtonColors(d3.select(this), d3.select(this.parentNode))
+							d3.select("#numberToggle").text(i+1)
+							
+						})
+						*/
+						.on("click", function(d) {
+							update(d);
+							updateButtonColors(d3.select(this), d3.select(this.parentNode))
+						})
+						.on("mouseover", function() {
+							if (d3.select(this).select("rect").attr("fill") != pressedColor) {
+								d3.select(this)
+									.select("rect")
+									.attr("fill",hoverColor);
+							}
+						})
+						.on("mouseout", function() {
+							if (d3.select(this).select("rect").attr("fill") != pressedColor) {
+								d3.select(this)
+									.select("rect")
+									.attr("fill",defaultColor);
+							}
+						})
+
+var bWidth= 60; //button width
+var bHeight= 25; //button height
+var bSpace= 10; //space between buttons
+var x0= 20; //x offset
+var y0= 10; //y offset
+
+//adding a rect to each toggle button group
+//rx and ry give the rect rounded corner
+buttonGroups.append("rect")
+			.attr("class","buttonRect")
+			.attr("width",bWidth)
+			.attr("height",bHeight)
+			.attr("x",function(d,i) {return x0+(bWidth+bSpace)*i;})
+			.attr("y",y0)
+			//.attr("rx",5) //rx and ry give the buttons rounded corners
+			//.attr("ry",5)
+			.attr("fill",defaultColor)
+
+//adding text to each toggle button group, centered 
+//within the toggle button rect
+buttonGroups.append("text")
+			.attr("class","buttonText")
+			.attr("font-family","Arial, Helvetica, sans-serif")
+			.attr("x",function(d,i) {
+				return x0 + (bWidth+bSpace)*i + bWidth/2;
+			})
+			.attr("y",y0+bHeight/2)
+			.attr("text-anchor","middle")
+			.attr("dominant-baseline","central")
+			.attr("fill","black")
+			.text(function(d) {return d;})
+
+function updateButtonColors(button, parent) {
+	parent.selectAll("rect")
+			.attr("fill",defaultColor)
+
+	button.select("rect")
+			.attr("fill",pressedColor)
+}
+
+
+onload=load();
+
+function load() {
+		
+		d3.select("rect").attr("fill",pressedColor)
+		floor3();
+}
+
+
+function update(d) {
+	switch (d) {
+		case "FLOOR 3":
+			floor3();
+			break;
+		case "FLOOR 4":
+			floor4();
+			break;
+		case "FLOOR 5":
+			floor5();
+			break;
+		case "FLOOR 6":
+			floor6();
+			break;
+		case "FLOOR 7":
+			floor7();
+			break;
+	}
+}
+function floor3() {
+queue()
+    .defer(d3.json, "data/Floor3.json")
+	.defer(d3.json, "data/Units_3rdFL.json")
+    .await(readyFl3);
+	
+function readyFl3(error, Floor3, Units_3rdFL) {
+	g.selectAll("path").remove();
+	g.selectAll(".floor")
+			.data(topojson.feature(Floor3, Floor3.objects.collection).features)
+
+		.enter()
+			.append("path")
+			.attr("class","floor")
+			.attr("d", path);
+			
+	g.selectAll(".Units_3rdFL")
+			.data(topojson.feature(Units_3rdFL, Units_3rdFL.objects.collection).features)
+			
+		.enter()
+			.append("path")
+			.attr("class", function (d,i) { return "unit3_" + i; })
+			.attr("d", path);
+			
+	}
+}
+
+function floor4() {
+queue()
+    .defer(d3.json, "data/Floor4.json")
+	.defer(d3.json, "data/Units_4thFL.json")
+    .await(readyFl4);
+	
+function readyFl4(error, Floor4, Units_4thFL) {
+	g.selectAll("path").remove();
+	g.selectAll(".floor")
+			.data(topojson.feature(Floor4, Floor4.objects.collection).features)
+
+		.enter()
+			.append("path")
+			.attr("class","floor")
+			.attr("d", path);
+			
+	g.selectAll(".Units_4thFL")
+			.data(topojson.feature(Units_4thFL, Units_4thFL.objects.collection).features)
+			
+		.enter()
+			.append("path")
+			.attr("class", function (d,i) { return "unit4_" + i; })
+			.attr("d", path);
+			
+	}
+}
+
+function floor5() {
+queue()
+    .defer(d3.json, "data/Floor5.json")
+	.defer(d3.json, "data/Units_5thFL.json")
+    .await(readyFl5);
+	
+function readyFl5(error, Floor5, Units_5thFL) {
+	g.selectAll("path").remove();
+	g.selectAll(".floor")
+			.data(topojson.feature(Floor5, Floor5.objects.collection).features)
+
+		.enter()
+			.append("path")
+			.attr("class","floor")
+			.attr("d", path);
+			
+	g.selectAll(".Units_5thFL")
+			.data(topojson.feature(Units_5thFL, Units_5thFL.objects.collection).features)
+			
+		.enter()
+			.append("path")
+			.attr("class", function (d,i) { return "unit5_" + i; })
+			.attr("d", path);
+			
+	}
+}
+
+function floor6() {
+queue()
+    .defer(d3.json, "data/Floor6.json")
+	.defer(d3.json, "data/Units_6thFL.json")
+    .await(readyFl6);
+	
+function readyFl6(error, Floor6, Units_6thFL) {
+	g.selectAll("path").remove();
+	g.selectAll(".floor")
+			.data(topojson.feature(Floor6, Floor6.objects.collection).features)
+
+		.enter()
+			.append("path")
+			.attr("class","floor")
+			.attr("d", path);
+			
+	g.selectAll(".Units_6thFL")
+			.data(topojson.feature(Units_6thFL, Units_6thFL.objects.collection).features)
+			
+		.enter()
+			.append("path")
+			.attr("class", function (d,i) { return "unit6_" + i; })
+			.attr("d", path);
+			
+	}
+}
+
+function floor7() {
+queue()
+    .defer(d3.json, "data/Floor7.json")
+	.defer(d3.json, "data/Units_7thFL.json")
+    .await(readyFl7);
+	
+function readyFl7(error, Floor7, Units_7thFL) {
+	g.selectAll("path").remove();
+	g.selectAll(".floor")
+			.data(topojson.feature(Floor7, Floor7.objects.collection).features)
+
+		.enter()
+			.append("path")
+			.attr("class","floor")
+			.attr("d", path);
+			
+	g.selectAll(".Units_7thFL")
+			.data(topojson.feature(Units_7thFL, Units_7thFL.objects.collection).features)
+			
+		.enter()
+			.append("path")
+			.attr("class", function (d,i) { return "unit7_" + i; })
+			.attr("d", path);
+			
+	}
+}
+
+function removeFromArray(arr) {
+    var what, a = arguments, L = a.length, ax;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax= arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
+}
+
+var svgScaleBar = d3.select("body #scaleImage").append("svg")
+	.attr("width", 400)
+	.attr("height", 100),
+	max = { x: 400, y: 100},
+	//max = { x: 900, y: 600},
+    imgUrl = "data/scaleBar.png";
+svgScaleBar.append("defs")
+    .append("pattern")
+    .attr("id", "scaleBar")
+    .attr('patternUnits', 'userSpaceOnUse')
+    .attr("width", max.x)
+    .attr("height", max.y)
+    .append("image")
+    .attr("xlink:href", imgUrl)
+    .attr("width", max.x)
+    .attr("height", max.y);
+svgScaleBar.append("rect")
+    .attr("x", "0")
+    .attr("y", "0")
+    .attr("width", max.x)
+    .attr("height", max.y)	
+    .attr("fill", "url(#scaleBar)");
+
+var svgImg = d3.select("body #legendImage").append("svg")
+	.attr("width", 600)
+	.attr("height", 200),
+	max = { x: 600, y: 200},
+	//max = { x: 900, y: 600},
+    imgUrl = "data/legendNorthArrow_cropped.png";
+svgImg.append("defs")
+    .append("pattern")
+    .attr("id", "venus")
+    .attr('patternUnits', 'userSpaceOnUse')
+    .attr("width", max.x)
+    .attr("height", max.y)
+    .append("image")
+    .attr("xlink:href", imgUrl)
+    .attr("width", max.x)
+    .attr("height", max.y);
+svgImg.append("rect")
+    .attr("x", "0")
+    .attr("y", "0")
+    .attr("width", max.x)
+    .attr("height", max.y)	
+    .attr("fill", "url(#venus)");
+
+</script>
+</body>
